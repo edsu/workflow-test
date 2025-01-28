@@ -1,0 +1,14 @@
+name: Test
+
+on:
+  release:
+    types:
+      published
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: |
+          echo "deploying ${{ github.ref }} to prod"
