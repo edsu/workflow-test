@@ -1,15 +1,12 @@
 name: Test
 on:
-  - push
+  - push:
+#      branches:
+#    - update-dependencies
+
 jobs:
-
   deploy:
-    on:
-      push:
-        branches:
-          - update-dependencies
-
     steps:
-      - name: build/deploy image to dev
+      - name: hi
         run: |
           echo "hi"
