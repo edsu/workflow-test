@@ -1,8 +1,10 @@
 name: Test
 on:
   push:
-    branches:
-      - update-dependencies
+    tags:
+      - 'v*.*.*'
+#   branches:
+#     - update-dependencies
 
 jobs:
   deploy:
@@ -10,4 +12,4 @@ jobs:
     steps:
       - name: hi
         run: |
-          echo "hi"
+          echo "{{ github.ref }}"
