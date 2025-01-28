@@ -3,13 +3,11 @@ on:
   push:
     tags:
       - 'rel-*-*-*'
-#   branches:
-#     - update-dependencies
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: hi
+      - name: deploy-dev
         run: |
-          echo "${{ github.ref }}"
+          echo "deploying ${{ github.ref }} to dev"
